@@ -1,0 +1,14 @@
+{
+  "name": "node-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Ethan Arrowood <ethan@arrowood.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "harperdb-websocket-client": "^1.0.5",
+    "undici": "^2.2.0"
+  }
+}

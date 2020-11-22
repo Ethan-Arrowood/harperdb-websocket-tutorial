@@ -107,7 +107,7 @@ function App() {
       <p>Click the button below to generate some random animals.</p>
       <button onClick={() => {
         const animal = generateAnimal()
-        client.insert('dev:animals', animal)
+        client.insert('dev:animals', [animal])
       }}>Generate</button>
 	    <hr/>
       <ul>
