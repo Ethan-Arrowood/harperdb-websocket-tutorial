@@ -59,13 +59,13 @@ const generateAnimal = () => {
 		'octopus',
 		'zebra'
 	]
-	
+
 	const sizes = [
 		'large',
 		'medium',
 		'small'
 	]
-	
+
 	const color = '#' + Math.random().toString(16).substr(2,6)
 
 	return {
@@ -94,7 +94,7 @@ function App() {
   const [data, setData] = useState([])
 
   const addAnimal = useCallback(
-    animal => setData([...data, animal]),
+    animal => setData([...data, ...animal.transaction.records]),
     [setData, data]
   )
 
@@ -113,7 +113,7 @@ function App() {
       <ul>
         {
           data.map(d => (
-            <li style={{ color: d.color }}>
+            <li key={d.id} style={{ color: d.color }}>
               {`${d.size} ${d.type}`}
             </li>
           ))
